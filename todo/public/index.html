@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="todo">
+	<head>
+        <meta charset="utf-8" />
+		<title>Angular JS - Todo app!</title>
+		<link rel="stylesheet" href="assets/css/style.min.css" type="text/css" media="all" />
+	</head>
+	<body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Todo</h1>
+            </div>
+            <div class="row" ng-controller="TodoController as todo">
+                <div class="col-md-4">
+                    <ul>
+                        <li>{{ todo.task.name }}
+                        <input type="checkbox" name="" ng-model="{{todo.task.finished}}" value="{{todo.task.finished}}" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/angular.min.js"></script>
+        <script src="assets/js/app.js"></script>
+	</body>
+</html>
