@@ -1,0 +1,31 @@
+@import "font-awesome/font-awesome.less";
+@import "bootstrap/bootstrap.less";
+
+.task-list{
+    list-style: none;   
+    padding:0;
+    margin:0;
+
+    li{
+        border: 3px rgba(0,0,0,.2) solid;
+        border-radius: 5px;
+        margin: 5px 0;   
+        padding: 20px;
+        font-style:italic;
+        font-size: 25px;
+
+        input[type=checkbox]{
+            position: relative;
+            float: right;
+        }
+    }
+    
+    li:hover{
+        border-color: rgba(56,245,72,.5); 
+    }
+
+    li.finished{
+        text-decoration: line-through;
+    }
+}
+

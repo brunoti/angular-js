@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="todo">
+	<head>
+        <meta charset="utf-8" />
+		<title>Angular JS - Todo app!</title>
+		<link rel="stylesheet" href="assets/style.min.css" type="text/css" media="all" />
+	</head>
+	<body>
+        <div class="container">
+            <div class="page-header">
+                <h1>Todo</h1>
+            </div>
+            <div class="row">
+                <form novalidate ng-controller="TaskFormController as taskform" ng-submit="taskform.addTask()">
+                    <label class="col-md-1" for="newTask">Task:</label>
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="newTask" ng-model="taskform.task.name" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="submit">Save</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <section>
+                        <ul class="task-list" ng-controller="TaskListController as list">
+                            <li ng-repeat="task in list.tasks" ng-class="{ finished:task.finished }"> {{ task.name }} <input ng-model="task.finished" type="checkbox" name="finished"></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+            
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/angular.min.js"></script>
+        <script src="assets/js/app.js"></script>
+	</body>
+</html>
