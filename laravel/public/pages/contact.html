@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="page-reader">
+        <h1>{{ contact.name }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3">
+        <ul>
+            <li>{{ contact.name }}</li>
+            <li>{{ contact.email }}</li>
+            <li>{{ contact.desc }}</li>
+            <li>          
+                <a href="#/contact/{{contact.id}}/edit" class="btn btn-xs btn-success">Editar</a>
+                <button ng-click="deletar()" class="btn btn-xs btn-danger">Deletar</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+

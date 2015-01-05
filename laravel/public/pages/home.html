@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="page-reader">
+        <h1>Contatos <a class="btn btn-default" href="#/newcontact">Novo Contato</a></h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3">
+        <ul>
+            <li ng-repeat="contact in contacts">
+                <a href="#/contact/{{contact.id}}">{{ contact.name }}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
