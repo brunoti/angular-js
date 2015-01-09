@@ -8,12 +8,15 @@
         <form ng-submit="updateContact()">
 
             <div class="form-group">
+                <label for="name">Nome:</label>
                 <input ng-model="contact.name" class="form-control" type="text" name="name" id="name" />
             </div>
             <div class="form-group">
+                <label for="email">Email:</label>
                 <input ng-model="contact.email"class="form-control" type="text" name="email" id="email" />
             </div>
             <div class="form-group">
+                <label for="desc">Descrição:</label>
                 <textarea ng-model="contact.desc"class="form-control" name="desc" id="desc" ></textarea>
             </div>
 

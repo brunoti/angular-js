@@ -7959,26 +7959,9 @@ button.close {
     display: none !important;
   }
 }
-.task-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.task-list li {
-  border: 3px rgba(0, 0, 0, 0.2) solid;
-  border-radius: 5px;
-  margin: 5px 0;
-  padding: 20px;
-  font-style: italic;
-  font-size: 25px;
-}
-.task-list li input[type=checkbox] {
-  position: relative;
-  float: right;
-}
-.task-list li:hover {
-  border-color: rgba(56, 245, 72, 0.5);
-}
-.task-list li.finished {
-  text-decoration: line-through;
+div.form-div {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(200, 200, 200, 0.5);
+  margin-top: 5%;
 }

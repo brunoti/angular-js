@@ -33,6 +33,12 @@ App::after(function($request, $response)
 |
 */
 
+//Route::filter('auth', function(){
+//	if(!Auth::check()){
+//		return Response::json(['flash' => 'Please log in!'], 401);
+//	}
+//});
+
 Route::filter('auth', function()
 {
 	if (Auth::guest())
@@ -41,10 +47,13 @@ Route::filter('auth', function()
 		{
 			return Response::make('Unauthorized', 401);
 		}
-		else
-		{
-			return Redirect::guest('login');
-		}
+		return Redirect::guest('login');
+	}
+});
+
+Route::filter('csrf_json', function(){
+	if(Session::toke() != Input::json('crsrf_toke')){
+		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
 

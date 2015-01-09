@@ -1,25 +1,36 @@
-var app = angular.module('contacts', ['contactService', 'mainController', 'ngRoute'])
+var app = angular.module('contacts', [
+        'loginController',
+        'contactController',
+        'contactsController',
+        'ngRoute'
+])
     .config(function($routeProvider) {
         $routeProvider
+            .when('/',{
+                templateUrl : "pages/login-form.html",
+                controller  : "loginCtrl"
+            })
 
-            .when('/', {
+            .when('/contacts', {
                 templateUrl : 'pages/home.html',
-                controller  : 'contactController'
+                controller  : 'contactsCtrl'
             })
 
             .when('/contact/:id', {
                 templateUrl : 'pages/contact.html',
-                controller  : 'contactDetailsController'
+                controller  : 'contactCtrl'
             })
 
             .when('/contact/:id/edit', {
                 templateUrl : 'pages/edit.html',
-                controller  : 'contactDetailsController'
+                controller  : 'contactCtrl'
             })
 
             .when('/newcontact', {
                 templateUrl : 'pages/new.html',
-                controller  : 'contactController'
-            });
+                controller  : 'contactCtrl'
+            })
+
+            .otherwise({redirectTo: '/'});
 
     });

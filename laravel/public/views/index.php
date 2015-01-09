@@ -18,7 +18,10 @@
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
     <script src="js/services/contactService.js"></script>
-    <script src="js/controllers/mainController.js"></script>
+    <script src="js/services/loginService.js"></script>
+    <script src="js/controllers/contactController.js"></script>
+    <script src="js/controllers/contactsController.js"></script>
+    <script src="js/controllers/loginController.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

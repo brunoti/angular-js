@@ -31,7 +31,9 @@ class ContactController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        Contact::create(Input::all());
+
+        return Response::json( ['success' => true] );
 	}
 
 
@@ -67,7 +69,15 @@ class ContactController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+        $contact = Contact::find($id);
+
+        $contact->name = Input::get('name');
+        $contact->email = Input::get('email');
+        $contact->desc = Input::get('desc');
+
+        $contact->save();
+
+        return Response::json( ['success' => true] );
 	}
 
 
